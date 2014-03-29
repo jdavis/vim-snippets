@@ -1,0 +1,207 @@
+snippet #! "#!"
+#!/usr/bin/env Rscript
+endsnippet
+
+# includes
+snippet lib "lib"
+library(${0:package})
+endsnippet
+
+snippet req "req"
+require(${0:package})
+endsnippet
+
+snippet source "source"
+source('${0:file}')
+endsnippet
+
+# conditionals
+snippet if "if"
+if (${1:condition}) {
+	${0}
+}
+endsnippet
+
+snippet el "el"
+else {
+	${0}
+}
+endsnippet
+
+snippet ei "ei"
+else if (${1:condition}) {
+	${0}
+}
+endsnippet
+
+# functions
+snippet fun "fun"
+${1:name} = function (${2:variables}) {
+	${0}
+}
+endsnippet
+
+snippet ret "ret"
+return(${0})
+endsnippet
+
+# dataframes, lists, etc
+snippet df "df"
+${1:name}[${2:rows}, ${0:cols}]
+endsnippet
+
+snippet c "c"
+c(${0:items})
+endsnippet
+
+snippet li "li"
+list(${0:items})
+endsnippet
+
+snippet mat "mat"
+matrix(${1:data}, nrow=${2:rows}, ncol=${0:cols})
+endsnippet
+
+# apply functions
+snippet apply "apply"
+apply(${1:array}, ${2:margin}, ${0:function})
+endsnippet
+
+snippet lapply "lapply"
+lapply(${1:list}, ${0:function})
+endsnippet
+
+snippet sapply "sapply"
+lapply(${1:list}, ${0:function})
+endsnippet
+
+snippet vapply "vapply"
+vapply(${1:list}, ${2:function}, ${0:type})
+endsnippet
+
+snippet mapply "mapply"
+mapply(${1:function}, ${0:...})
+endsnippet
+
+snippet tapply "tapply"
+tapply(${1:vector}, ${2:index}, ${0:function})
+endsnippet
+
+snippet rapply "rapply"
+rapply(${1:list}, ${0:function})
+endsnippet
+
+# plyr functions
+snippet dd "dd"
+ddply(${1:frame}, ${2:variables}, ${0:function})
+endsnippet
+
+snippet dl "dl"
+dlply(${1:frame}, ${2:variables}, ${0:function})
+endsnippet
+
+snippet da "da"
+daply(${1:frame}, ${2:variables}, ${0:function})
+endsnippet
+
+snippet d_ "d_"
+d_ply(${1:frame}, ${2:variables}, ${0:function})
+endsnippet
+
+snippet ad "ad"
+adply(${1:array}, ${2:margin}, ${0:function})
+endsnippet
+
+snippet al "al"
+alply(${1:array}, ${2:margin}, ${0:function})
+endsnippet
+
+snippet aa "aa"
+aaply(${1:array}, ${2:margin}, ${0:function})
+endsnippet
+
+snippet a_ "a_"
+a_ply(${1:array}, ${2:margin}, ${0:function})
+endsnippet
+
+snippet ld "ld"
+ldply(${1:list}, ${0:function})
+endsnippet
+
+snippet ll "ll"
+llply(${1:list}, ${0:function})
+endsnippet
+
+snippet la "la"
+laply(${1:list}, ${0:function})
+endsnippet
+
+snippet l_ "l_"
+l_ply(${1:list}, ${0:function})
+endsnippet
+
+l_ply(${1:list}, ${0:function})
+mdply(${1:matrix}, ${0:function})
+endsnippet
+
+l_ply(${1:list}, ${0:function})
+mdply(${1:matrix}, ${0:function})
+mlply(${1:matrix}, ${0:function})
+endsnippet
+
+l_ply(${1:list}, ${0:function})
+mdply(${1:matrix}, ${0:function})
+mlply(${1:matrix}, ${0:function})
+maply(${1:matrix}, ${0:function})
+endsnippet
+
+l_ply(${1:list}, ${0:function})
+mdply(${1:matrix}, ${0:function})
+mlply(${1:matrix}, ${0:function})
+maply(${1:matrix}, ${0:function})
+m_ply(${1:matrix}, ${0:function})
+endsnippet
+
+# plot functions
+snippet pl "pl"
+plot(${1:x}, ${0:y})
+endsnippet
+
+snippet ggp "ggp"
+ggplot(${1:data}, aes(${0:aesthetics}))
+endsnippet
+
+snippet img "img"
+${1:(jpeg,bmp,png,tiff)}(filename="${2:filename}", width=${3}, height=${4}, unit="${5}")
+${0:plot}
+dev.off()
+endsnippet
+
+# statistical test functions
+snippet fis "fis"
+fisher.test(${1:x}, ${0:y})
+endsnippet
+
+snippet chi "chi"
+chisq.test(${1:x}, ${0:y})
+endsnippet
+
+snippet tt "tt"
+t.test(${1:x}, ${0:y})
+endsnippet
+
+snippet wil "wil"
+wilcox.test(${1:x}, ${0:y})
+endsnippet
+
+snippet cor "cor"
+cor.test(${1:x}, ${0:y})
+endsnippet
+
+snippet fte "fte"
+var.test(${1:x}, ${0:y})
+endsnippet
+
+snippet kvt "kvt"
+kv.test(${1:x}, ${0:y})
+endsnippet
